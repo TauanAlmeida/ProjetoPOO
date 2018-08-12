@@ -1,19 +1,16 @@
-class Cliente extends Funcionario{
-    String cpf;
-    String telefone;
+public class Cliente extends Pessoa{
+    String logradouro;
     double gastoTotal;
 
-    void setCliente(String nome, String cpf, String telefone, double gasto){
-        this.nome = nome;
-        this.cpf = cpf;
-        this.telefone = telefone;
-        this.gastoTotal = (gasto > 0) ? gasto = 0 : gasto;
+    void setCliente(String nome, String cpf, String telefone, String endereco){
+        this.setPessoa(nome, cpf, telefone);
+        this.logradouro = endereco;
+        this.gastoTotal = 0;
     }
 
     void getCliente(){
-        System.out.println("Cliente Nome: " +this.nome);
-        System.out.println("Cpf: " +this.cpf);
-        System.out.println("Telefone: " +this.telefone);
+        this.getPessoa();
+        System.out.println("Logradouro: " +this.logradouro);
         System.out.println("Gasto Total: " +this.gastoTotal);
     }
 }

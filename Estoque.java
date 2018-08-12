@@ -1,12 +1,24 @@
-class Estoque{
-    double produtoId;
-    String nomeProduto;
-    String marca;
-    String tipoProduto;
-    int quantidade;
-    double preco;
+public class Estoque{
+    private int produtoId;
+    public String nomeProduto;
+    public String marca;
+    private String tipoProduto;
+    public int quantidade;
+    private double preco;
 
-    void setProduto(double id, String nome, String marca, String tipoProduto, int quantidade, double valor){
+    int getEstoque(){
+        return this.quantidade;
+    }
+
+    void setDescontarEstoque(int quantidade){
+        this.quantidade = this.quantidade - quantidade;
+    }
+
+    public String getProdutoNome(){
+        return this.nomeProduto; 
+    }
+
+    void setProduto(int id, String nome, String marca, String tipoProduto, int quantidade, double valor){
         this.produtoId = id;
         this.nomeProduto = nome;
         this.marca = marca;
@@ -16,7 +28,7 @@ class Estoque{
     }
 
     void getProduto(){
-        System.out.println("Produto id: " +this.produtoId);
+        System.out.println("\nProduto id: " +this.produtoId);
         System.out.println("Nome: " +this.nomeProduto);
         System.out.println("Marca: " +this.marca);
         System.out.println("Tipo do Produto: " +this.tipoProduto);

@@ -1,9 +1,10 @@
-class Funcionario{
+class Funcionario extends Pessoa{
     public String nome;
     private String funcao;
     private double salario;
     private String dataAdmissao;
-    HoraEntradaSaida horario;
+    private String horaEntrada;
+    private String horaSaida;
 
     void setFuncionario(String nome, 
                         String funcao, 
@@ -14,26 +15,15 @@ class Funcionario{
     this.funcao = funcao;
     this.salario = salario;
     this.dataAdmissao = dataAdmissao;
-    this.horario.entrada = entrada;
-    this.horario.saida = saida;
+    this.horaEntrada = entrada;
+    this.horaSaida = saida;
     }
     
     void getFuncionario(){
-        System.out.println("Nome: " +this.nome);
+        this.getPessoa();
         System.out.println("Funcao: " +this.funcao);
         System.out.println("Salario: " +this.salario);
         System.out.println("Data de Admissao: " +this.dataAdmissao);
-        System.out.println("Entrada: " +this.horario.entrada);
-        System.out.println("Saida: " +this.horario.saida);
+        System.out.println("Hora E/S: " +this.horaEntrada + " / " + this.horaSaida);
     }
-
-    void setHorario(String entrada, String saida){
-        this.horario.entrada = entrada;
-        this.horario.saida = saida;
-    }
-}
-
-class HoraEntradaSaida{
-    String entrada;
-    String saida;
 }
