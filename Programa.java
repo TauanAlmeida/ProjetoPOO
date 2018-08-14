@@ -11,7 +11,6 @@ class Programa{
         Estoque acucar = new Estoque();
         Estoque macarrao = new Estoque();
         
-       
         //cadastro do estoque
         //setProduto(id, nome, marca, tipo, quantidade, valor)
         arroz.setProduto( 1, "Arroz", "Chines", "Alimenticio", 585, 3.25);
@@ -33,7 +32,7 @@ class Programa{
         listaProdutos.add(produto2);
         
      
-       //cx.debitarCarrinho(listaProdutos, estoqueProdutos);
+        //cx.debitarCarrinho(listaProdutos, estoqueProdutos);
             for(int i = 0; i < estoqueProdutos.size(); i++){
                 for(int j = 0; j < listaProdutos.size(); j++){
                     if (listaProdutos.get(j).getNomeProdutoCarrinho().equalsIgnoreCase(estoqueProdutos.get(i).getProdutoNome())){
@@ -42,8 +41,8 @@ class Programa{
                     } 
                 } 
             }
-
-
+            cx.setMetododePagamento("asdasd");
+            System.out.println(cx.getMetodoPagamento());
         
 
         f1.setFuncionario("Tauan", "operador de caixa", 987, "15/05/2015", "10:50", "18:50");

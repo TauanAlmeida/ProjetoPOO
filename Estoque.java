@@ -1,16 +1,16 @@
 public class Estoque{
-    private int produtoId;
-    public String nomeProduto;
-    public String marca;
-    private String tipoProduto;
     public int quantidade;
+    public String nomeProduto;
+    private int produtoId;
+    private String marca;
+    private String tipoProduto;
     private double preco;
 
-    int getEstoque(){
+    public int getEstoque(){
         return this.quantidade;
     }
 
-    void setDescontarEstoque(int quantidade){
+    public void setDescontarEstoque(int quantidade){
         this.quantidade = this.quantidade - quantidade;
     }
 
@@ -18,7 +18,7 @@ public class Estoque{
         return this.nomeProduto; 
     }
 
-    void setProduto(int id, String nome, String marca, String tipoProduto, int quantidade, double valor){
+    public void setProduto(int id, String nome, String marca, String tipoProduto, int quantidade, double valor){
         this.produtoId = id;
         this.nomeProduto = nome;
         this.marca = marca;

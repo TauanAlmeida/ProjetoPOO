@@ -13,4 +13,8 @@ public class Cliente extends Pessoa{
         System.out.println("Logradouro: " +this.logradouro);
         System.out.println("Gasto Total: " +this.gastoTotal);
     }
+
+    public void setGasto(double gasto) {
+        this.gastoTotal = gasto;
+    }
 }
