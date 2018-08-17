@@ -35,13 +35,13 @@ class Programa{
         listaProdutos.add(produto3);
         
         //setCliente(nome, cpf, telefone, endereco, gasto)
-        c1.setCliente("Roberto", "105.654.987", "87- 88428891","Rua onze n261 vila debora");
-
+        c1.setCadastro("Roberto", "105.654.987", "87- 88428891","Rua onze n261 vila debora");
         //debitarCarrinho(arrayCarrinho, arrayEstoque, Cliente obj, String tipoPagamento)
         cx.debitarCarrinho(listaProdutos, estoqueProdutos, c1, "Cartao");
-
-        f1.setFuncionario("Tauan", "operador de caixa", 987, "15/05/2015", "10:50", "18:50");
         
+        f1.setCadastro("Tauan", "operador de caixa", 987, "15/05/2015", "10:50", "18:50");
+        f1.getCadastro();
+        c1.getCadastro();
 
     }
 }

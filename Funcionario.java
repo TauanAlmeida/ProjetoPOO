@@ -1,16 +1,16 @@
-class Funcionario extends Pessoa{
-    public String nome;
+public class Funcionario extends Pessoa{
     private String funcao;
     private double salario;
     private String dataAdmissao;
     private String horaEntrada;
     private String horaSaida;
 
-    void setFuncionario(String nome, 
-                        String funcao, 
-                        double salario, 
-                        String dataAdmissao, 
-                        String entrada, String saida){
+    public void setCadastro(String nome, 
+                            String funcao, 
+                            double salario, 
+                            String dataAdmissao, 
+                            String entrada, 
+                            String saida){
     this.nome = nome;
     this.funcao = funcao;
     this.salario = salario;
@@ -19,8 +19,8 @@ class Funcionario extends Pessoa{
     this.horaSaida = saida;
     }
     
-    void getFuncionario(){
-        this.getPessoa();
+    public void getCadastro(){
+      System.out.println("\nFuncionario\nNome: "+this.nome);
         System.out.println("Funcao: " +this.funcao);
         System.out.println("Salario: " +this.salario);
         System.out.println("Data de Admissao: " +this.dataAdmissao);

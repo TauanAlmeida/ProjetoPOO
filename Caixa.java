@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Caixa extends Carrinho{
-    double valorTemp;
+    private double valorTemp;
     
     //Seta o valor da compra feita pelo cliente: Ex: valor * quantidade = valor da compra. 
     public void setValorTemp(double valor, double quantidade){

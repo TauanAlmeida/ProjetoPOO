@@ -1,20 +1,25 @@
 public class Cliente extends Pessoa{
-    String logradouro;
-    double gastoTotal;
-    boolean aVista;
-    boolean cartao;
+    private String logradouro;
+    private double gastoTotal;
+    private boolean aVista;
+    private boolean cartao;
 
-
-    public void setCliente(String nome, String cpf, String telefone, String endereco){
-        this.setPessoa(nome, cpf, telefone);
+    public void setCadastro(String nome, String cpf, String telefone, String endereco){
+        this.nome = nome;
+        this.cpf = cpf;
+        this.telefone = telefone;
         this.logradouro = endereco;
         this.gastoTotal = 0;
     }
 
-    public void getCliente(){
-        this.getPessoa();
+    public void getCadastro(){
+        System.out.println("\nCliente\nNome: "+this.nome);
+        System.out.println("CPF: " +this.cpf);
+        System.out.println("Telefone: "+this.telefone);
         System.out.println("Logradouro: " +this.logradouro);
         System.out.println("Gasto Total: " +this.gastoTotal);
+        getGasto();
+        System.out.println(getMetodoPagamento()); 
     }
 
     public void setGasto(double gasto) {
