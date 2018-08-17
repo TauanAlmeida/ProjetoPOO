@@ -11,7 +11,11 @@ public class Estoque{
     }
 
     public void setDescontarEstoque(int quantidade){
-        this.quantidade = this.quantidade - quantidade;
+        if (quantidade <= getEstoque()){
+            this.quantidade -= quantidade;
+        }else{
+            System.out.println("Erro, Estoque insuficiente");
+        }   
     }
 
     public String getProdutoNome(){
@@ -36,4 +40,7 @@ public class Estoque{
         System.out.println("Preço Unidade: R$ " +this.preco);
     }
     
+    public double getValorProduto(){
+        return this.preco;
+    }
 }

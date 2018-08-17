@@ -26,28 +26,22 @@ class Programa{
         //inserindo produtos no carrinho 
         Carrinho produto1 = new Carrinho(); 
         Carrinho produto2 = new Carrinho();
+        Carrinho produto3 = new Carrinho();
         produto1.setCarrinho("acucar", 15);
         produto2.setCarrinho("macarrao", 5);
+        produto3.setCarrinho("arroz", 8);
         listaProdutos.add(produto1); 
         listaProdutos.add(produto2);
+        listaProdutos.add(produto3);
         
-     
-        //cx.debitarCarrinho(listaProdutos, estoqueProdutos);
-            for(int i = 0; i < estoqueProdutos.size(); i++){
-                for(int j = 0; j < listaProdutos.size(); j++){
-                    if (listaProdutos.get(j).getNomeProdutoCarrinho().equalsIgnoreCase(estoqueProdutos.get(i).getProdutoNome())){
-                        estoqueProdutos.get(i).setDescontarEstoque(listaProdutos.get(j).getQuantidadeProduto());
-                        System.out.println("Estoque "+listaProdutos.get(j).getNomeProdutoCarrinho()+ ": " +  estoqueProdutos.get(i).getEstoque());
-                    } 
-                } 
-            }
-            cx.setMetododePagamento("asdasd");
-            System.out.println(cx.getMetodoPagamento());
-        
-
-        f1.setFuncionario("Tauan", "operador de caixa", 987, "15/05/2015", "10:50", "18:50");
         //setCliente(nome, cpf, telefone, endereco, gasto)
         c1.setCliente("Roberto", "105.654.987", "87- 88428891","Rua onze n261 vila debora");
-       // c1.getCliente();
+
+        //debitarCarrinho(arrayCarrinho, arrayEstoque, Cliente obj, String tipoPagamento)
+        cx.debitarCarrinho(listaProdutos, estoqueProdutos, c1, "Cartao");
+
+        f1.setFuncionario("Tauan", "operador de caixa", 987, "15/05/2015", "10:50", "18:50");
+        
+
     }
 }
