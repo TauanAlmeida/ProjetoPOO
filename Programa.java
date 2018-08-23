@@ -36,6 +36,8 @@ class Programa{
         
         //setCliente(nome, cpf, telefone, endereco, gasto)
         c1.setCadastro("Roberto", "105.654.987", "87- 88428891","Rua onze n261 vila debora");
+        //mostra todos produtos do estoque
+        cx.getProdutosEstoque(estoqueProdutos);
         //debitarCarrinho(arrayCarrinho, arrayEstoque, Cliente obj, String tipoPagamento)
         cx.debitarCarrinho(listaProdutos, estoqueProdutos, c1, "Cartao");
         

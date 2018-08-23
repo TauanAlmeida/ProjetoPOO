@@ -13,7 +13,7 @@ public class Caixa extends Carrinho{
     }
   
     public void debitarCarrinho(ArrayList<Carrinho> listaProdutos, ArrayList<Estoque> estoqueProdutos, Cliente cl , String tipoPagamento){
-        System.out.println("NOTA FISCAL!");
+        System.out.println("\nNOTA FISCAL!");
         System.out.println("Produtos Comprados");
         for(int i = 0; i < estoqueProdutos.size(); i++){
             for(int j = 0; j < listaProdutos.size(); j++){
@@ -32,5 +32,12 @@ public class Caixa extends Carrinho{
         //Zerando o valor temporario para a compra seguinte.
         setValorTemp(0, 0);
     }
-   
+
+    public void getProdutosEstoque(ArrayList<Estoque> estoqueProdutos){
+        for(int i = 0; i < estoqueProdutos.size(); i++){
+            System.out.println("Estoque Produtos");
+            estoqueProdutos.get(i).getProduto();
+        }
+
+    }
 }

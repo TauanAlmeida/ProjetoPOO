@@ -31,7 +31,7 @@ public class Estoque{
         this.preco = valor;
     }
 
-    void getProduto(){
+    public void getProduto(){
         System.out.println("\nProduto id: " +this.produtoId);
         System.out.println("Nome: " +this.nomeProduto);
         System.out.println("Marca: " +this.marca);
