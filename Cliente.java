@@ -40,4 +40,8 @@ public class Cliente extends Pessoa{
         return pagamento; 
     }
 
+    //cliente Desconto em 5%
+    public double getBonifica(){
+        return getGasto() * 0.05;
+      }
 }

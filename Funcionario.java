@@ -26,4 +26,17 @@ public class Funcionario extends Pessoa{
         System.out.println("Data de Admissao: " +this.dataAdmissao);
         System.out.println("Hora E/S: " +this.horaEntrada + " / " + this.horaSaida);
     }
+
+    public void setSalario(double valor){
+        this.salario = valor;
+    }
+
+    public double getSalario(){
+        return this.salario;
+    }
+
+    //Bonus em 8%
+    public double getBonifica(){
+        return 1.08;
+    }
 }

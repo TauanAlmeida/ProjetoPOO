@@ -14,4 +14,12 @@ public class Pessoa{
         System.out.println("Cpf: " +this.cpf);
         System.out.println("Telefone: " +this.telefone);
     }
+
+    public void setBonifica(){
+        System.out.println("N temos bonus para voce");
+    }
+
+    public double getBonifica(){
+        return 0;
+    }
 }

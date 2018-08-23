@@ -2,10 +2,20 @@ import java.util.ArrayList;
 
 public class Caixa extends Carrinho{
     private double valorTemp;
+    private double bonus;
     
     //Seta o valor da compra feita pelo cliente: Ex: valor * quantidade = valor da compra. 
     public void setValorTemp(double valor, double quantidade){
         this.valorTemp += valor * quantidade;
+    }
+
+    public double setBonus(Pessoa p){
+        this.bonus = p.getBonifica();
+        return p.getBonifica();
+    }
+
+    public double getBonus(){
+        return this.bonus;
     }
 
     public double getValorTemp(){
@@ -25,11 +35,12 @@ public class Caixa extends Carrinho{
                 } 
             } 
         }
+        cl.setGasto(getValorTemp());
         System.out.println("Valor Total: R$" + getValorTemp());
         cl.setMetododePagamento(tipoPagamento);
         System.out.println("Tipo pagamento: " +cl.getMetodoPagamento());
 
-        //Zerando o valor temporario para a compra seguinte.
+        //Zerando o valor temporario para a proxima compra.
         setValorTemp(0, 0);
     }
 
@@ -38,6 +49,5 @@ public class Caixa extends Carrinho{
             System.out.println("Estoque Produtos");
             estoqueProdutos.get(i).getProduto();
         }
-
     }
 }

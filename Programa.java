@@ -45,5 +45,12 @@ class Programa{
         f1.getCadastro();
         c1.getCadastro();
 
+       
+        f1.setSalario( cx.setBonus(f1) * f1.getSalario());
+        c1.setGasto (cx.setBonus(c1) + c1.getGasto() );
+        f1.getCadastro();
+        c1.getCadastro();
+       
+
     }
 }
